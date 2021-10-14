@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{CF3A2563-F569-2E85-A212-E3EB55A845FC}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Spawner.cs">
+    <Files>
+      <File FileName="Assets/PlayerShooting.cs" Line="39" Column="9" />
+      <File FileName="Assets/Spawner.cs" Line="13" Column="25" />
+      <File FileName="Assets/Player.cs" Line="14" Column="32" />
+      <File FileName="Assets/Health.cs" Line="7" Column="21" />
+      <File FileName="Assets/Enemies/MediumEnemy.cs" Line="18" Column="29" />
+      <File FileName="Assets/Enemies/EasyEnemy.cs" Line="17" Column="29" />
+      <File FileName="Assets/Enemies/HardEnemy.cs" Line="18" Column="29" />
+      <File FileName="Assets/ScoreTracking.cs" Line="17" Column="1" />
+      <File FileName="Assets/StageScripts/CombineMesh.cs" Line="1" Column="1" />
+      <File FileName="Assets/StageScripts/LeftAngledWallCreator.cs" Line="1" Column="1" />
+      <File FileName="Assets/StageScripts/MovementBoundaries.cs" Line="1" Column="1" />
+      <File FileName="Assets/StageScripts/RightAngledWallCreator.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TheLastVanguard" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5e771faf-9622-47fe-a107-fc107cfca80c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

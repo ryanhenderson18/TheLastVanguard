@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{E8ECE2A3-DA81-8EA5-6BE7-4E62977C2080}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ArenaFloor.cs">
+    <Files>
+      <File FileName="Assets/ArenaFloor.cs" Line="26" Column="37" />
+      <File FileName="Assets/Player.cs" Line="18" Column="105" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CommandoSteelGunner" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="ArenaFloor.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="01605833-2083-49df-8ee9-158be3b4480e" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
