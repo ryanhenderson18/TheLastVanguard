@@ -5,14 +5,21 @@ using UnityEngine;
 public class HardEnemy : MonoBehaviour
 {
     public Health health;
-    public float period = 2.0f;
-    private float nextIncrement = 0.0f;
+    public GameObject playerReference;
+    public GameObject laser;
+
+    public float period = 2f;
+    private float nextIncrement = 2f;
+    private int laserSpeed = 5;
+    private float timer;
+    private int moveIndex = 0;
     private readonly Vector3[] movementLocations = new Vector3[]{new Vector3(-5,1,-7), new Vector3(6,1,0),
                                                         new Vector3(3,1,-6),  new Vector3(-6,1,0)};
     private int shotDamage = 20;
 
     void Start()
     {
+        playerReference = GameObject.Find("Player");
         gameObject.GetComponent<Renderer>().material.color = Color.green;
         health = GetComponent<Health>();
         health.SetHealth(300, 300);
@@ -20,29 +27,41 @@ public class HardEnemy : MonoBehaviour
 
     void Update()
     {
-        if (Time.time > nextIncrement)
+        timer += Time.deltaTime;
+        if (playerReference.activeSelf)
         {
-            nextIncrement += period;
-            ChangeLocation();
+            Transform playerTransform = playerReference.transform;
+            transform.LookAt(playerTransform);
+        }
+
+        if (timer >= nextIncrement)
+        {
+            timer = 0f;
+            transform.position = movementLocations[moveIndex];
+            moveIndex++;
             ShootGun();
         }
-        Transform playerTransform = GameObject.Find("Player").transform;
-        transform.LookAt(playerTransform);
-
-    }
-    void ChangeLocation()
-    {
-        int moveLocation = Random.Range(0, 4);
-        while (movementLocations[moveLocation] == transform.position)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            moveLocation = Random.Range(0, 4);
+            gameObject.SetActive(false);
         }
-        transform.position = movementLocations[moveLocation];
+        if (moveIndex == 4)
+        {
+            moveIndex = 0;
+        }
     }
 
     void ShootGun()
     {
-        Debug.DrawRay(transform.position, transform.forward * 50, Color.black, 1f);
+        GameObject tempLaserHandler;
+        tempLaserHandler = Instantiate(laser, transform.position, transform.rotation) as GameObject;
+        tempLaserHandler.transform.Rotate(Vector3.left * -90);
+
+        Rigidbody tempRigidbody;
+        tempRigidbody = tempLaserHandler.GetComponent<Rigidbody>();
+
+        tempRigidbody.AddForce(transform.forward * laserSpeed, ForceMode.VelocityChange);
+        //Debug.DrawRay(transform.position, transform.forward * 50, Color.black, 1f);
         Ray Shot = new Ray(transform.position, transform.forward);
 
         RaycastHit hitInfo;
@@ -54,6 +73,7 @@ public class HardEnemy : MonoBehaviour
                 health.HitTaken(shotDamage);
             }
         }
+        Destroy(tempLaserHandler, 0.5f);
     }
 
 }

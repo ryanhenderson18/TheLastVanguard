@@ -7,7 +7,7 @@ public class ScoreTracking : MonoBehaviour
 {
     private int score = 0;
     public string text;
-    public Text textelement;
+    public Text textelement; 
 
     void Start()
     {

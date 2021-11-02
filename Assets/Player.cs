@@ -5,13 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private int playerSpeed = 5;
-    private int rotationSpeed = 700;
+    private int rotationSpeed = 1100;
     public Health health;
 
     void Start()
     { 
         health = GetComponent<Health>();
-        health.SetHealth(200, 200);
+        health.SetHealth(2000, 2000);
     }
 
     void Update()
